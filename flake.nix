@@ -70,6 +70,7 @@
 
               (mk-script.lib.mkScript pkgs { } "build-resume" "scripts/build.elv")
               (mk-script.lib.mkScript pkgs { } "deploy-resume" "scripts/deploy.elv")
+              (mk-script.lib.mkScript pkgs { } "quickploy" "scripts/quickploy.elv")
             ];
           };
         }

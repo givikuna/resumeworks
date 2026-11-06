@@ -5,6 +5,7 @@
     "elif",
     "enumitem",
     "fancyhdr",
+    "Forgejo",
     "Givi",
     "givikuna",
     "latexmk",
@@ -14,11 +15,15 @@
     "nonstopmode",
     "pdflatex",
     "pkgs",
+    "quickploy",
+    "Ramda",
     "resumeworks",
     "synctex",
     "texlive",
     "titlesec",
     "Tsvariani",
+    "Typst",
+    "Ynternals",
     "ysyldur"
   ]
 }

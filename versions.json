@@ -2,6 +2,11 @@
   "version1": {
     "education": ["rutgers"],
     "experience": ["dj-electronics", "open-source"],
-    "projects": ["loid", "acrithis", "ysyldur"]
+    "projects": ["ynternals", "ysyldur", "loid"]
+  },
+  "version2": {
+    "education": ["rutgers"],
+    "experience": ["dj-electronics", "open-source"],
+    "projects": ["ysyldur", "loid", "acrithis"]
   }
 }

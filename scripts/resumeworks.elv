@@ -70,7 +70,7 @@ fn format-snippets {|category items|
             exit 1
         }
 
-        put '\input{'$p'}'
+        slurp < $p
     } | str:join "\n  "
 }
 

@@ -16,20 +16,20 @@ fn format-snippets {|category items|
             exit 1
         }
 
-        put '\input{'$pwd'/'$path'}'
+        slurp < $path
     } | str:join "\n "
 }
 
 fn build-version {|ver|
     var spec = $config[$ver]
 
-    var edu-block  = (format-snippets education $spec[education])
+    var edu-block  = (format-snippets education  $spec[education])
     var exp-block  = (format-snippets experience $spec[experience])
-    var proj-block = (format-snippets projects $spec[projects])
+    var proj-block = (format-snippets projects   $spec[projects])
 
-    var step1     = (str:replace '%%EDUCATION%%' $edu-block $template)
+    var step1     = (str:replace '%%EDUCATION%%'  $edu-block $template)
     var step2     = (str:replace '%%EXPERIENCE%%' $exp-block $step1)
-    var final-tex = (str:replace '%%PROJECTS%%' $proj-block $step2)
+    var final-tex = (str:replace '%%PROJECTS%%'   $proj-block $step2)
 
     var tex-path = versions/$ver.tex
 
@@ -39,7 +39,7 @@ fn build-version {|ver|
     pdflatex -interaction=nonstopmode -halt-on-error -output-directory=versions $tex-path > /dev/null
     echo 'compiled  versions/'$ver'.pdf'
 
-    rm -f versions/$ver.aux versions/$ver.log versions/$ver.out
+    rm -f versions/$ver.aux versions/$ver.log versions/$ver.out versions/$ver.fdb_latexmk versions/$ver.fls versions/$ver.synctex.gz
 }
 
 if (== 0 (count $args)) {

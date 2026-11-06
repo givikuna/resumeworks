@@ -1,0 +1,178 @@
+%-------------------------
+% Resume in Latex
+% Author : Givi Tsvariani
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%   START   %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Givi Tsvariani} \\ \vspace{1pt}
+    \small 929-485-6747 $|$ \href{mailto:gvtsvariani@gmail.com}{\underline{gvtsvariani@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/givi-tsvariani-072355169}{\underline{linkedin.com/in/givi-tsvariani-072355169}} $|$
+    \href{https://github.com/givikuna}{\underline{github.com/givikuna}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+  {Rutgers University}{New Brunswick, NJ}
+  {Mathematics \& Computer Science Major, Physics Minor. 3.2/4.0.}{Sep. 2024 -- Expected Jun. 2028}
+\resumeItemListStart
+  \resumeItem{\textbf{Computer Science}: Principles of Programming Languages, Systems Programming, Computer Architecture.}
+  \resumeItem{\textbf{Mathematics}: Graph Theory, Abstract Algebra I, Linear Optimization, Differential Equations.}
+  \resumeItem{\textbf{Physics}: Foundations of Quantum Mechanics, Analytical Physics, Quantum Mechanics and Atomic Physics}
+\resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+  {Intern}{Jun. 2024 -- Aug. 2024}
+  {D\&J Electronics}{Burlington, NJ}
+\resumeItemListStart
+  \resumeItem{Diagnosed and resolved hardware and operating system issues on company laptops and servers.}
+  \resumeItem{Configured and re-imaged workstations for large-scale (100+ machines) deployment at conferences.}
+  % \resumeItem{Managed and organized end-to-end hardware inventory lifecycles, deployments, shipping, testing, and fixing.}
+\resumeItemListEnd
+ \resumeSubheading
+  {Open Source Maintainer}{Jan. 2022 -- Present}
+  {Independent}{Remote}
+\resumeItemListStart
+  \resumeItem{Maintainer of multiple packages in the world's largest package repository, \href{https://github.com/nixos/nixpkgs}{\underline{Nixpkgs}}.}
+  \resumeItem{Developer and maintainer of the \href{https://github.com/givikuna/nixp}{\underline{Nixp}} Lisp dialect as an alternative Nix frontend in the Odin language. This also brings a type-safe experience to Nix.}
+  \resumeItem{Created and maintain Nix flakes such as: \href{https://github.com/givikuna/nixtants}{\underline{Nixtants}} (free-form constants) and \href{https://github.com/givikuna/nix-mkScript}{\underline{mkScript}} (Nix script management).}
+\resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+  \resumeProjectHeading
+  {\textbf{Ysyldur} $|$ \emph{Linux, Systemd, Nix, BASH} [\href{https://github.com/givikuna/ysyldur/}{\underline{GitHub}}]}{}
+\resumeItemListStart
+  \resumeItem{An importable Nix flake for setting up and managing the Linux kernel.}
+  \resumeItem{Designed with a clean API for setting kernel variant, version, parameters, sysctl settings, drivers, and swapping kernel modules.}
+  \resumeItem{Relies on Nixpkgs and Chaotic-Nyx repositories for kernel packages.}
+  \resumeItem{Currently running in production on my fleet of over 10 NixOS hosts (laptops, servers, virtual machines, and VPSs).}
+\resumeItemListEnd
+ \resumeProjectHeading
+  {\textbf{Loid} $|$ \emph{Rust, TypeScript, JavaScript, GitHub} [\href{https://github.com/Loid-Project/loid}{\underline{GitHub}}]}{}
+\resumeItemListStart
+  \resumeItem{Working with a team on the Loid programming language (WiP) and its ecosystem.}
+  \resumeItem{Uses a dependent type system, first class types, functions, and OOP features while allowing for nicer side effects.}
+  \resumeItem{Written in Rust with the purpose of compiling to JavaScript code for both browser and node targets.}
+  \resumeItem{Uses type theory (Martin-Löf), the Call-By-Push-Value paradigm, and monadic error handling for compile-time type-safety.}
+  \resumeItem{Designed with DSL creation and Web Development in mind, featuring a huge standard library with dozens of separate modules.}
+\resumeItemListEnd
+ \resumeProjectHeading
+  {\textbf{Acrithis} $|$ \emph{Rust, SQLite, Nushell, Ollama, Nix, Lean4} [\href{https://github.com/givikuna/acrithis}{\underline{GitHub}}]}{}
+\resumeItemListStart
+  \resumeItem{A Directed Acyclic Graph (DAG) enforcing SQLite wrapper database for Lean4 programs.}
+  \resumeItem{Sets up a Merkle Tree structure for theorem and axiom dependencies for each program.}
+  \resumeItem{AI agents use Acrithis as an immutable append and read-only database for large mathematical proofs.}
+  \resumeItem{When in use for Mathematics proofs, expected to eliminate up to 20\% of hallucinations.}
+  \resumeItem{Written in Rust, as a part of my final project paper for the AI in Mathematics class at Rutgers (Math496).}
+\resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming Languages}{: TypeScript, Python, JavaScript, Rust, Odin, Go, Gleam, Racket.} \\
+     \textbf{Developer Tools}{: Git, Docker, Webpack, Linux, GitHub/Forgejo, CI/CD, Postgres, Typst, Latex.} \\
+     \textbf{Libraries/Frameworks}{: jQuery, ExpressJS, AstroJS, Lustre, Ramda, fp-ts, MochaJS, ChaiJS, WPILib.} \\
+     \textbf{Systems}{: Ubuntu/Debian, NixOS, GNU Coreutils, BASH \& Nushell, AWS EC2, Hetzner.} \\
+     \textbf{Computer Science}{: Functional Programming, Compilers, Type Systems, Formal Verification, Package Management.} \\
+     \textbf{Mathematics}{: Graph Theory, Type Theory (Martin-Löf), ZFC Set Theory, Lambda Calculus, Category Theory.} \\
+     \textbf{Languages}{: English, Georgian, conversational Spanish.}
+    }}
+ \end{itemize}
+
+\end{document}
+

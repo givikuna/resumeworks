@@ -98,31 +98,75 @@
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
-  \input{/home/givik/Work/resumeworks/snippets/education/rutgers.tex}
+  \resumeSubheading
+  {Rutgers University}{New Brunswick, NJ}
+  {Mathematics \& Computer Science Major, Physics Minor. 3.2/4.0.}{Sep. 2024 -- Expected Jun. 2028}
+\resumeItemListStart
+  \resumeItem{\textbf{Computer Science}: Principles of Programming Languages, Systems Programming, Computer Architecture.}
+  \resumeItem{\textbf{Mathematics}: Graph Theory, Abstract Algebra I, Linear Optimization, Differential Equations.}
+  \resumeItem{\textbf{Physics}: Foundations of Quantum Mechanics, Analytical Physics, Quantum Mechanics and Atomic Physics}
+\resumeItemListEnd
   \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
-  \input{/home/givik/Work/resumeworks/snippets/experience/dj-electronics.tex}
- \input{/home/givik/Work/resumeworks/snippets/experience/open-source.tex}
+  \resumeSubheading
+  {Intern}{Jun. 2024 -- Aug. 2024}
+  {D\&J Electronics}{Burlington, NJ}
+\resumeItemListStart
+  \resumeItem{Diagnosed and resolved hardware and operating system issues on company laptops and servers.}
+  \resumeItem{Configured and re-imaged workstations for large-scale (100+ machines) deployment at conferences.}
+  % \resumeItem{Managed and organized end-to-end hardware inventory lifecycles, deployments, shipping, testing, and fixing.}
+\resumeItemListEnd
+ \resumeSubheading
+  {Open Source Maintainer}{Jan. 2022 -- Present}
+  {Independent}{Remote}
+\resumeItemListStart
+  \resumeItem{Maintainer of multiple packages in the world's largest package repository, \href{https://github.com/nixos/nixpkgs}{\underline{Nixpkgs}}.}
+  \resumeItem{Developer and maintainer of the \href{https://github.com/givikuna/nixp}{\underline{Nixp}} Lisp dialect as an alternative Nix frontend in the Odin language. This also brings a type-safe experience to Nix.}
+  \resumeItem{Created and maintain Nix flakes such as: \href{https://github.com/givikuna/nixtants}{\underline{Nixtants}} (free-form constants) and \href{https://github.com/givikuna/nix-mkScript}{\underline{mkScript}} (Nix script management).}
+\resumeItemListEnd
   \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
 \section{Projects}
   \resumeSubHeadingListStart
-  \input{/home/givik/Work/resumeworks/snippets/projects/loid.tex}
- \input{/home/givik/Work/resumeworks/snippets/projects/acrithis.tex}
- \input{/home/givik/Work/resumeworks/snippets/projects/ysyldur.tex}
+  \resumeProjectHeading
+  {\textbf{Ynternals} $|$ \emph{Go, BASH, Nix, GitHub} [\href{https://github.com/givikuna/ynternals/}{\underline{GitHub}}]}{}
+\resumeItemListStart
+  \resumeItem{A declarative, symmetric-key secrets management system for NixOS hosts, encrypting secrets with AES-256.}
+  \resumeItem{Guarantees zero Nix store leakage, memory-only decryption, strong encryption, and more.}
+  \resumeItem{Provides a NixOS module and a full CLI application for setting up and managing secrets across hosts.}
+  \resumeItem{Currently in use across a fleet of over 10 NixOS hosts (VMs, containers, laptops, servers, cloud computers).}
+  \resumeItem{Written in Go with type-driven development, having a modular codebase and a monadic error handling system, per best functional programming practices.}
+\resumeItemListEnd
+ \resumeProjectHeading
+  {\textbf{Ysyldur} $|$ \emph{Linux, Systemd, Nix, BASH} [\href{https://github.com/givikuna/ysyldur/}{\underline{GitHub}}]}{}
+\resumeItemListStart
+  \resumeItem{An importable Nix flake for setting up and managing the Linux kernel.}
+  \resumeItem{Designed with a clean API for setting kernel variant, version, parameters, sysctl settings, drivers, and swapping kernel modules.}
+  \resumeItem{Relies on Nixpkgs and Chaotic-Nyx repositories for kernel packages.}
+  \resumeItem{Currently running in production on my fleet of over 10 NixOS hosts (laptops, servers, virtual machines, and VPSs).}
+\resumeItemListEnd
+ \resumeProjectHeading
+  {\textbf{Loid} $|$ \emph{Rust, TypeScript, JavaScript, GitHub} [\href{https://github.com/Loid-Project/loid}{\underline{GitHub}}]}{}
+\resumeItemListStart
+  \resumeItem{Working with a team on the Loid programming language (WiP) and its ecosystem.}
+  \resumeItem{Uses a dependent type system, first class types, functions, and OOP features while allowing for nicer side effects.}
+  \resumeItem{Written in Rust with the purpose of compiling to JavaScript code for both browser and node targets.}
+  \resumeItem{Uses type theory (Martin-Löf), the Call-By-Push-Value paradigm, and monadic error handling for compile-time type-safety.}
+  \resumeItem{Designed with DSL creation and Web Development in mind, featuring a huge standard library with dozens of separate modules.}
+\resumeItemListEnd
   \resumeSubHeadingListEnd
 
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Programming Languages}{: TypeScript, Python, JavaScript, Rust, Odin, Go, Haskell, Racket.} \\
+     \textbf{Programming Languages}{: TypeScript, Python, JavaScript, Rust, Odin, Go, Gleam, Racket.} \\
      \textbf{Developer Tools}{: Git, Docker, Webpack, Linux, GitHub/Forgejo, CI/CD, Postgres, Typst, Latex.} \\
-     \textbf{Libraries/Frameworks}{: jQuery, ExpressJS, AstroJS, Ramda, fp-ts, MochaJS, ChaiJS, WPILib.} \\
+     \textbf{Libraries/Frameworks}{: jQuery, ExpressJS, AstroJS, Lustre, Ramda, fp-ts, MochaJS, ChaiJS, WPILib.} \\
      \textbf{Systems}{: Ubuntu/Debian, NixOS, GNU Coreutils, BASH \& Nushell, AWS EC2, Hetzner.} \\
      \textbf{Computer Science}{: Functional Programming, Compilers, Type Systems, Formal Verification, Package Management.} \\
      \textbf{Mathematics}{: Graph Theory, Type Theory (Martin-Löf), ZFC Set Theory, Lambda Calculus, Category Theory.} \\

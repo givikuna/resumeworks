@@ -8,3 +8,10 @@ common.out
 common.odf
 common.pdf
 common.synctex.gz
+
+*.aux
+*.log
+*.out
+*.fdb_latexmk
+*.fls
+*.synctex.gz
