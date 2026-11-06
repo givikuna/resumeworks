@@ -66,11 +66,12 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeProjectHeading}[2]{
+\newcommand{\resumeProjectHeading}[2]{%
+    \par\prevdepth=-1000pt
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-7pt}%
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
@@ -147,15 +148,15 @@
   \resumeItem{An importable Nix flake for setting up and managing the Linux kernel.}
   \resumeItem{Designed with a clean API for setting kernel variant, version, parameters, sysctl settings, drivers, and swapping kernel modules.}
   \resumeItem{Relies on Nixpkgs and Chaotic-Nyx repositories for kernel packages.}
-  \resumeItem{Currently running in production on my fleet of over 10 NixOS hosts (laptops, servers, virtual machines, and VPSs).}
+  \resumeItem{Currently running in production on my fleet of over 10 NixOS hosts (laptops, servers, VMs, and VPSs).\strut}
 \resumeItemListEnd
  \resumeProjectHeading
-  {\textbf{Loid} $|$ \emph{Rust, TypeScript, JavaScript, GitHub} [\href{https://github.com/Loid-Project/loid}{\underline{GitHub}}]}{}
+  {\textbf{Loid} $|$ \emph{Rust, TypeScript, JavaScript} [\href{https://github.com/Loid-Project/loid}{\underline{GitHub}}]}{}
 \resumeItemListStart
   \resumeItem{Working with a team on the Loid programming language (WiP) and its ecosystem.}
   \resumeItem{Uses a dependent type system, first class types, functions, and OOP features while allowing for nicer side effects.}
   \resumeItem{Written in Rust with the purpose of compiling to JavaScript code for both browser and node targets.}
-  \resumeItem{Uses type theory (Martin-Löf), the Call-By-Push-Value paradigm, and monadic error handling for compile-time type-safety.}
+  \resumeItem{Uses dependent type theory (Martin-Löf), the Call-By-Push-Value paradigm (inspired, not directly), and monadic error handling for compile-time type-safety.}
   \resumeItem{Designed with DSL creation and Web Development in mind, featuring a huge standard library with dozens of separate modules.}
 \resumeItemListEnd
   \resumeSubHeadingListEnd
