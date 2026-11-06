@@ -1,3 +1,10 @@
-
-
 .direnv
+
+common.aux
+common.fdb_latexmk
+common.fls
+common.log
+common.out
+common.odf
+common.pdf
+common.synctex.gz

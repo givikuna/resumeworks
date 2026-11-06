@@ -107,7 +107,7 @@ for version $versions {
         try {
             pdflatex -interaction=nonstopmode -halt-on-error \
             -output-directory=$tmp $tmp/$version.tex
-        } except e {
+        } catch e {
             set ok = $false
         }
 

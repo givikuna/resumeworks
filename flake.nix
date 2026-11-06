@@ -69,6 +69,7 @@
               (tex-pkg pkgs)
 
               (mk-script.lib.mkScript pkgs { } "build-resume" "scripts/build.elv")
+              (mk-script.lib.mkScript pkgs { } "deploy-resume" "scripts/deploy.elv")
             ];
           };
         }

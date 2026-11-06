@@ -1,4 +1,4 @@
-#!usr/bin/env elvish
+#!/usr/bin/env elvish
 
 use os
 use str
@@ -15,7 +15,8 @@ fn format-snippets {|category items|
             echo 'ERROR: missing snippet file '$path
             exit 1
         }
-        put '\input{'$path'}'
+
+        put '\input{'$pwd'/'$path'}'
     } | str:join "\n "
 }
 
@@ -28,7 +29,7 @@ fn build-version {|ver|
 
     var step1     = (str:replace '%%EDUCATION%%' $edu-block $template)
     var step2     = (str:replace '%%EXPERIENCE%%' $exp-block $step1)
-    var final-tex = (str:replace '%%PROJECTS' $proj-block $step2)
+    var final-tex = (str:replace '%%PROJECTS%%' $proj-block $step2)
 
     var tex-path = versions/$ver.tex
 
