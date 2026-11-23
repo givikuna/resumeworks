@@ -1,12 +1,17 @@
 {
   "version1": {
     "education": ["rutgers"],
-    "experience": ["dj-electronics", "open-source"],
+    "experience": ["open-source", "dj-electronics"],
     "projects": ["ynternals", "ysyldur", "loid"]
   },
   "version2": {
     "education": ["rutgers"],
-    "experience": ["dj-electronics", "open-source"],
+    "experience": ["open-source", "dj-electronics"],
     "projects": ["ysyldur", "loid", "acrithis"]
+  },
+  "future-me": {
+    "education": ["rutgers"],
+    "experience": ["amphiseum", "open-source"],
+    "projects": ["loid", "acrithis"]
   }
 }
